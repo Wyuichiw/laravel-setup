@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №2 - Робота з файлами</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .box { background: #f9f9f9; padding: 20px; margin-bottom: 20px; border-radius: 5px; width: 400px; border: 1px solid #ddd; }
+        input[type="text"], input[type="file"], textarea { width: 100%; padding: 8px; margin: 8px 0; box-sizing: border-box; }
+        input[type="submit"] { background: #007bff; color: white; padding: 10px 15px; border: none; cursor: pointer; border-radius: 3px; }
+        input[type="submit"]:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h2>Лабораторна робота №2: Файли та файлова структура</h2>
+
+    <div class="box">
+        <h3>1. Завантаження зображення (до 2 МБ)</h3>
+        <form action="process.php" method="POST" enctype="multipart/form-data">
+            <label>Виберіть файл (png, jpg, jpeg):</label>
+            <input type="file" name="uploaded_file" required>
+            <input type="submit" value="Завантажити файл">
+        </form>
+    </div>
+
+    <div class="box">
+        <h3>2. Запис тексту у log.txt</h3>
+        <form action="text.php" method="POST">
+            <label>Введіть текст для запису:</label>
+            <textarea name="user_text" rows="4" required></textarea>
+            <input type="submit" value="Записати у файл">
+        </form>
+    </div>
+
+    <div class="box">
+        <h3>3. Список завантажених файлів</h3>
+        <a href="list.php" target="_blank"><button type="button" style="padding: 10px 15px; background: #28a745; color: white; border: none; cursor: pointer; border-radius: 3px;">Переглянути список файлів</button></a>
+    </div>
+
+</body>
+</html>
